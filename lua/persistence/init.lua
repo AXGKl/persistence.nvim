@@ -50,7 +50,7 @@ function M.start()
           end
           return vim.api.nvim_buf_get_name(b) ~= ""
         end, vim.api.nvim_list_bufs())
-        if #bufs == 0 then
+        if #bufs < 2 then
           return
         end
       end
